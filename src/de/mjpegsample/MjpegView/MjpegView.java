@@ -193,7 +193,8 @@ public class MjpegView extends SurfaceView implements SurfaceHolder.Callback {
         String state = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(state)) {
         	//file = new File(context.getExternalFilesDir(null), "output.avi");
-        	file = new File(context.getExternalFilesDir(Environment.DIRECTORY_MOVIES), "output.avi");
+        	//file = new File(context.getExternalFilesDir(Environment.DIRECTORY_MOVIES), "output.avi");
+        	file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES), "output.avi");
             try {
 				encoder = new SequenceEncoder(file);
 			} catch (IOException e) {

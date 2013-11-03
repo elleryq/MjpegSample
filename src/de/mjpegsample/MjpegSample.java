@@ -57,7 +57,7 @@ public class MjpegSample extends Activity {
                     //You must turn off camera User Access Control before this will work
                     return null;
                 }
-                return new MjpegInputStream(res.getEntity().getContent());  
+                return new MjpegInputStream(res.getEntity().getContent());
             } catch (ClientProtocolException e) {
                 e.printStackTrace();
                 Log.d(TAG, "Request failed-ClientProtocolException", e);
